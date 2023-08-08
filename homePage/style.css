@@ -88,3 +88,10 @@ nav .log {
     font-size: 40px;
     color: aliceblue;
 }
+
+@media  and (max-width:980px) {
+    
+    nav {
+        grid-column: span 3;
+    }
+}
