@@ -8,8 +8,8 @@
     font-family: "poppins";
 }
 
+/*navigation bar*/
 nav {
-    background-color: rgb(179, 178, 178);
     display: flex;
     flex-direction: row;
     padding: 0.9rem 4rem;
@@ -42,18 +42,12 @@ nav .log {
     border-radius: 20px;
 }
 
-.about, nav{
+/*About Section*/
+.about{
     background-image: url(images/back.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center, bottom;
-    background-attachment: fixed;
-    
-}
-
-.about {
-    max-width: 100%;
-    
+    background-position: center;
 }
 
 .about .text {
@@ -69,7 +63,7 @@ nav .log {
     padding-bottom: 30px;
 }
 
-.about a {
+.about .button {
     background-color: black;
     color: aliceblue;
     text-decoration: none;
@@ -77,9 +71,13 @@ nav .log {
     padding: 0.1rem 1rem;
 }
 
+/*popular collection section*/
 .pop {
-    background-color: black;
-    
+    background-color: black;  
+    background-image: url(images/side-view-mushroom-frying-with-gas-stove-fire-human-hand-pan.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, bottom;
 } 
 
 .pop h2 {
@@ -89,9 +87,34 @@ nav .log {
     color: aliceblue;
 }
 
-@media  and (max-width:980px) {
-    
-    nav {
-        grid-column: span 3;
-    }
+.line1, .line2 {
+    padding: 8rem 8rem;
+}
+
+.line1 ul, .line2 ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+
+}
+
+.pop img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    overflow-x:inherit;
+}
+
+.pop .item {
+    overflow-x: scroll;
+}
+
+.jfy {
+    background-color: aliceblue;
+}
+
+.jfy h2 {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 40px;
 }
