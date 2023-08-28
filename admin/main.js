@@ -20,4 +20,3 @@ toggle.onclick = function () {
   main.classList.toggle("active");
 };
 
-console.log("Hello")
