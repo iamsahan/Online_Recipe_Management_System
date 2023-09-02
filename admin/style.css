@@ -231,6 +231,17 @@ body {
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
 }
 
+.cardBox .card1{
+  position: relative;
+  background: #f00;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
 .cardBox .card .numbers {
   position: relative;
   font-weight: 500;
