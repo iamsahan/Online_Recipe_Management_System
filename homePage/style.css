@@ -12,69 +12,115 @@
 nav {
     display: flex;
     flex-direction: row;
-    padding: 0.9rem 4rem;
+    padding-inline: 25px;
+    padding-top: 10px;
     justify-content: space-between;
     align-items: center;
+    background-color: black;
+    position: fixed;
+    width: 100%;
 }
 
 nav ul {
     display: flex;
     flex-direction: row;
     list-style: none;
-    gap: 3rem;
+    gap: 2.5rem;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color: black;
-    margin: 10px;
+    color: rgb(255, 255, 255);
+    padding: 0.3rem 1rem;
     font-size: 20px;
 }
 
+nav ul li a:hover {
+    color: black;
+    background-color: #ffffff;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;   
+}
+
 nav img {
-    width: 100px;
-    height: 80px;
+    width: 130px;
+    height: 70px;
 }
 
 nav .log {
     background-color: green;
-    padding: 0.3rem 1.1rem;
+    padding: 0.3rem 1rem;
     border-radius: 20px;
+}
+
+nav input {
+    border-radius: 20px;
+    width: 200px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+nav button {
+    border-radius: 20px;
+    width: 70px;
+    height: 30px;
+    background-color: rgb(131, 129, 129);
+    border-style: initial;
+}
+
+nav .active {
+    background-color: yellow;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+}
+
+nav .active a {
+    color: black;
 }
 
 /*About Section*/
 .about{
-    background-image: url(images/back.jpg);
+    background-image: url(images/chef-holding-pan-with-fire-inside.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    height: 830px;
 }
 
 .about .text {
-    padding: 12% 1%;
+    color: #ffffff;
+    position: absolute;
+    top: 25%;
+    left: 2%;
 }
 
 .about h2 {
-    font-size: 30px;
-    padding-bottom: 10px;
+    font-size: 35px;
+    margin-bottom: 25px;
+    color: rgb(180, 206, 223);
 }
 
 .about h3 {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
+    line-height: 40px;
+    color: rgb(201, 199, 199);
 }
 
 .about .button {
-    background-color: black;
-    color: aliceblue;
+    background-color: rgb(250, 249, 249);
+    color: rgb(6, 6, 6);
     text-decoration: none;
     font-size: 30px;
-    padding: 0.1rem 1rem;
+    padding: 0.1rem 1.2rem;
+    margin-top: 15px;
+    background-color: rgb(153, 53, 246);
 }
 
 /*popular collection section*/
 .pop {
-    background-color: black;  
-    background-image: url(images/side-view-mushroom-frying-with-gas-stove-fire-human-hand-pan.jpg); 
+    background-color: rgb(229, 232, 188);  
+    background: url(images/Truffles2.jpg);
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, bottom;
@@ -82,13 +128,13 @@ nav .log {
 
 .pop h2 {
     text-align: center;
-    padding-top: 5px;
-    font-size: 40px;
-    color: aliceblue;
+    padding-top: 10px;
+    font-size: 60px;
+    color: rgb(0, 0, 0);
 }
 
 .line1, .line2 {
-    padding: 8rem 8rem;
+    padding: 7rem 8rem;
 }
 
 .line1 ul, .line2 ul {
@@ -111,15 +157,113 @@ nav .log {
 
 .jfy {
     background-color: aliceblue;
+    background: linear-gradient(to bottom, rgba(63, 63, 63, 0.52), rgba(7, 1, 6, 0.73)), url(images/pngtree-healthy-vegetarian-black-lentil-salad-with-pomegranate-on-kitchen-table-with-picture-image_2835718.jpg);
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, bottom;
 }
 
-.jfy h2 {
+.jfy h1 {
     text-align: center;
     padding-top: 5px;
-    font-size: 40px;
+    font-size: 60px;
+    color: #d3d3d3;
 }
-.jfy h3 {
+
+.small {
+    width: 320px;
+    box-shadow: 0px 0px 30px 2px;
+    margin: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #e6e5e5;
+}
+
+.small img {
+    height: 250px;
+    width: 320px;
+}
+
+.small button {
+    margin-left: 35%;
+    margin-bottom: 20px;
+    background-color: green;
+    border-style: initial;
+    width: 100px;
+    height: 35px;
+    box-shadow: 0px 0px 5px 0.5px;
+
+}
+
+.small li {
+    list-style: none;
+    display:inline-block;
+    margin: 10px;
+}
+
+.small h2 {
+    margin: 10px;
+}
+
+.small p {
+    margin: 10px;
+    text-align:justify;
+}
+
+.checked {
+    color: orange;
+  }
+
+.rate {
+    margin: 10px;
+}
+
+.fhead {
     text-align: center;
-    padding-top: 2rem;
-    font-size: medium;
+    margin: 40px;
+}
+
+.fbody {
+    background-color: #d3d3d3;
+    padding-left: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+}
+
+.footer h4 {
+    position:absolute;
+    top:300px;
+    left: 46%;
+}
+
+.vr {
+    position: absolute;
+    border-left: 2px solid rgb(4, 4, 4);
+    height: 150px;
+    left: 50%;
+    top: 10px;
+    margin-left: -3px;
+}
+
+.fbody h2 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.fbody ul li{
+    display: inline-block;
+    padding-left: 30px;
+    padding-bottom: 40px;
+}
+
+.fbody ul li a {
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
 }
