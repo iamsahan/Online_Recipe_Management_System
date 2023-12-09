@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cook Booker</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/e8316c2466.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="css/bootstrap.css">
+    
 </head>
 <body>
-    
-    <section class="about">
-        <nav>
-            <img src="images/logo.png" alt="logo">
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+        <a href="" class="navbar-brand">Coock Booker</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#cc"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse justify-content-center" id="cc">
+            <ul class="navbar-nav nav nav-pills nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link active" href="">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Help</a>
+                </li>
+            </ul>
+        </div>
+        
+    </nav>
+        <nav >
+            <a href="" class="navbar-brand">Coock Booker</a>
             <ul>
                 <li><span class="active"><a href="a">Home</a></span></li>
                 <li><a href="a">Recipes</a></li>
                 <li><a href="a">About us</a></li>
                 <li><a href="a">Donation</a></li>
                 <li><a class="log" href="a">Sign in</a></li>
-                <li><input type="text" placeholder="Search"></li>
-                <li><span class="navb"><button>Search</button></span></li>
+                <li><div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                  </div>
+                </li>
             </ul>
         </nav>
+        
+        <section class="about">
         <div class="text">
             <h2>Lorem ipsum dolor sit amet consectetur
                 <br>adipisicing</h2>
@@ -193,7 +217,10 @@
         <hr>
     </section>
         
-        
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  
        
 </body>
 </html>
