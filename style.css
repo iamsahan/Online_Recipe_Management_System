@@ -13,6 +13,10 @@
 }
 
 /*navigation bar*/
+nav {
+    height: 80px;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
