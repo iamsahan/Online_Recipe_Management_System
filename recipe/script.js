@@ -101,3 +101,6 @@ function addStepbox(event) {
     document.getElementsByClassName("stps")[0].append(div);
 }
 
+function change() {
+    document.getElementsByClassName("active")[0].classList.remove("active");
+}

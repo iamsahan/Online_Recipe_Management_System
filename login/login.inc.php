@@ -22,6 +22,7 @@ if (isset($_POST['submit'])) {
           $_SESSION['uid'] = $user['uid'];         
           $_SESSION['name'] = $user['name'];
           $_SESSION['email'] = $user['email'];
+          $_SESSION['password'] = $user['password'];
           
           if($user['type'] == "user"){
             header("Location: /Online_Recipe_Management_System/user"); 

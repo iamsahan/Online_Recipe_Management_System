@@ -45,6 +45,8 @@ if (isset($_POST['submit'])) {
             if ($i == 1) {
                 $result2 = mysqli_query($conn, "SELECT rid FROM recipe ORDER BY rid DESC LIMIT 1");
                 $row = mysqli_fetch_array($result2);
+
+                
             }
 
             if ($i == 2){

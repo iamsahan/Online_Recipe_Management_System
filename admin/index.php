@@ -210,9 +210,10 @@
                                             while($row = mysqli_fetch_assoc($result)) { 
                                                 echo      '<tr>';
                                                 echo      '<td>'. $row['rid']. '</td>';
-                                                echo      '<td>'. $row['name']. '</td>';
+                                                echo      '<td><a href="/Online_Recipe_Management_System/recipe/view.php?id=' . $row['rid'] . '">' . $row['name'] . '</a></td>';
                                                 echo      '<td>'. $row['date']. '</td>';
                                                 echo      '<td>'. '<span class="status return">' .'Return' .'</span>' .'</td>';
+												echo      '<td>'. '<a href="updateinventory.php?id='.$row['pid'].'" class="btn">' .'Update' .'</a>' .'</td>';
                                                 echo      '</tr>';
                                             }
                                         };
@@ -264,7 +265,7 @@
 					<div class="recentOrders">
 					    <div class="cardHeader">
 							<h2>Admins</h2>
-							<a href="#" class="btn">Add New Admin</a>
+							<a href="addadmin.php" class="btn">Add New Admin</a>
 						</div>
 
 						<table>
