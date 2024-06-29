@@ -111,9 +111,7 @@
       ?>  
     </ul>
   </div>
-  <form method="post" action="approve.inc.php">
-    <button type="submit" name="submit">Approve</button>
-  </form>
+  
   <?php
     echo      '<td>'. '<a href="delete.inc.php?id='.$id.'" class="btn" style="background-color: #f00; text-decoration: none; padding: 5px; border-radius: 5px;"">' .'Delete' .'</a>' .'</td>';
   ?>

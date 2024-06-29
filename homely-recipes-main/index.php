@@ -95,7 +95,7 @@
               home-made food, share recipes, and connect with creators like you.
             </p>
            
-            <button class="btn-secondary">Get Free Recipe Resources</button>
+            <a href="collections.php" class="btn-secondary">Explore Recipe Collections</a>
           </div>
           <div
             class="recipe-scroll-component | flow flow-space-500"
@@ -133,7 +133,7 @@
                     class="recipe-card__title__name | body-small | chevron--right"
                     href="#"
                   >
-                    Fish Curry Special
+                    Breakfirst Special
                   </a>
                 </div>
               </div>

@@ -19,7 +19,7 @@
             <div class="collapse navbar-collapse collapse-horizontal" id="cc">
             <ul class="nav-fill nav-pills navbar-nav nav">
                 <li><span class="active"><a href="a">Home</a></span></li>
-                <li><a href="a">Recipes</a></li>
+                <li><a href="homely-recipes-main">Recipes</a></li>
                 <li><a href="a">About us</a></li>
                 <li><a href="a">Donation</a></li>
                 <?php

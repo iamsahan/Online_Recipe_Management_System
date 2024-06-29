@@ -31,7 +31,7 @@
       <nav>
         <div class="navigation container">
           <!-- a href to homepage  -->
-          <a href="index.html">
+          <a href="index.php">
             <div class="logo__wrapper">
               <span class="logo | mdc-theme--primary"
                 ><strong>Homely</strong></span

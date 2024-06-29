@@ -5,14 +5,17 @@
 <?php
     include_once("dbh.inc.php");
 
+	$user = $_SESSION['name'];
+
     $sql = array(
-            "SELECT * FROM recipe", 
+            "SELECT * FROM recipe WHERE status = 'pending'", 
             "SELECT COUNT(rid) FROM recipe",
             "SELECT * FROM user WHERE type = 'user'",
-            "SELECT * FROM user WHERE type = 'admin'"
+            "SELECT * FROM user WHERE type = 'admin'",
+			"SELECT * FROM recipe WHERE status = 'approved'"
         );
 
-    for ($i = 0; $i < 4; $i++) {
+    for ($i = 0; $i < 5; $i++) {
         if ($i == 0) {
             $result = mysqli_query($conn, $sql[$i]);
         }
@@ -24,6 +27,9 @@
         }
         if ($i == 3) {
             $result4 = mysqli_query($conn, $sql[$i]);
+        }
+		if ($i == 4) {
+            $result5 = mysqli_query($conn, $sql[$i]);
         }
     }    
 
@@ -51,7 +57,7 @@
 							<span class="icon">
 								<img src="imgs/customer01.jpg" alt="" />
 							</span>
-							<span class="tit">;?></span>
+							<span class="tit"><?php echo $user;?></span>
 						</a>
 					</li>
 
@@ -192,7 +198,7 @@
 					<div id="recentRes">
                         <div class="recentOrders">
                             <div class="cardHeader">
-                                <h2>Recent Recipes</h2>
+                                <h2>Pending Recipes</h2>
                             </div>
 
                             <table>
@@ -212,8 +218,43 @@
                                                 echo      '<td>'. $row['rid']. '</td>';
                                                 echo      '<td><a href="/Online_Recipe_Management_System/recipe/view.php?id=' . $row['rid'] . '">' . $row['name'] . '</a></td>';
                                                 echo      '<td>'. $row['date']. '</td>';
-                                                echo      '<td>'. '<span class="status return">' .'Return' .'</span>' .'</td>';
-												echo      '<td>'. '<a href="updateinventory.php?id='.$row['pid'].'" class="btn">' .'Update' .'</a>' .'</td>';
+                                                echo      '<td>'. '<span class="status return">' .'Pending' .'</span>' .'</td>';
+                                                echo      '</tr>';
+                                            }
+                                        };
+                                    ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+					<!-- ================ Recent Recipes ================= -->
+				<div class="details">
+					<div id="recentRes">
+                        <div class="recentOrders">
+                            <div class="cardHeader">
+                                <h2>Approved Recipes</h2>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Recipe ID</td>
+                                        <td>Recipe Name</td>
+                                        <td>Date</td>
+                                        <td>Status</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                        if(mysqli_num_rows($result5) > 0) {
+                                            while($row = mysqli_fetch_assoc($result5)) { 
+                                                echo      '<tr>';
+                                                echo      '<td>'. $row['rid']. '</td>';
+                                                echo      '<td><a href="/Online_Recipe_Management_System/recipe/appview.php?id=' . $row['rid'] . '">' . $row['name'] . '</a></td>';
+                                                echo      '<td>'. $row['date']. '</td>';
+                                                echo      '<td>'. '<span class="status return">' .'Approved' .'</span>' .'</td>';
                                                 echo      '</tr>';
                                             }
                                         };
@@ -257,6 +298,9 @@
                             </table>
                         </div>
                     </div>
+
+
+					
 				
 
 				<!--admins-->
