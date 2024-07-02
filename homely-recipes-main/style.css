@@ -86,3 +86,7 @@ nav button {
     background-color: rgb(33, 37, 41);
     text-align: center;
 }
+ 
+.res-list {
+    display: flex;
+}

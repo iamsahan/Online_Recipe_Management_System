@@ -1,6 +1,20 @@
 <?php 
     session_start();
 ?>
+
+<?php
+    include_once("dbh.inc.php");
+
+    $user = $_SESSION['name'];
+
+    $sql = "SELECT * FROM recipe WHERE status = 'approved'";
+
+    $result = mysqli_query($conn, $sql);
+
+    error_reporting(E_ALL);
+ini_set('display_errors', 1);
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,16 +78,16 @@
                 <div class="item">
                     <div class="line1">
                         <ul>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
-                            <li><img src="images/Pepperoni-Pizza-Recipe-Sip-Bite-Go.jpg"></li>
+                        <?php
+                                        if(mysqli_num_rows($result) > 0) {
+                                            while($row = mysqli_fetch_assoc($result)) { 
+                                                echo      '<li>';
+                                                echo      '<img src="/Online_Recipe_Management_System/recipe/images/'.$row['image']. '" style="height:20px width:20px">';
+                                                echo      '</li>';
+                                            }
+                                        };
+                                    ?>
+                            
                         </ul>    
                     </div>
                     <div class="line2">

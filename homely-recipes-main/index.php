@@ -95,7 +95,7 @@
               home-made food, share recipes, and connect with creators like you.
             </p>
            
-            <a href="collections.php" class="btn-secondary">Explore Recipe Collections</a>
+            <a href="collections" class="btn-secondary">Explore Recipe Collections</a>
           </div>
           <div
             class="recipe-scroll-component | flow flow-space-500"
@@ -400,13 +400,9 @@
 
           <!-- ? maybe add group media scrolling of 4 cards in 1 group collection --- to save space? -- can highlight eaach group with a bg-color and text -->
           <div
-            class="recipe-scroll-component | gap-top-300"
-            data-state="overflow-none"
+            class="res-list"
           >
-            <div
-              class="collections | media-scroller snaps-inline"
-              data-state="no-scroll-bg"
-            >
+            
               <div class="recipe-card">
                 <div class="hero__images__image | media-element">
                   <picture>
@@ -558,7 +554,7 @@
                     Snacks
                   </a>
                 </div>
-              </div>
+              
             </div>
           </div>
           <!-- end of new component recipe scroll collection -->

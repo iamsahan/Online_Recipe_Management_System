@@ -34,6 +34,9 @@
     }    
 
     $rowcount=mysqli_num_rows($result);
+	$rowcount5=mysqli_num_rows($result5);
+	$rowcount3=mysqli_num_rows($result3);
+	$rowcount4=mysqli_num_rows($result4);
 ?>
 
 <!DOCTYPE html>
@@ -81,15 +84,6 @@
 					</li>
 
 					<li>
-						<a href="#don">
-							<span class="icon">
-								<ion-icon name="card-outline"></ion-icon>
-							</span>
-							<span class="title">Donations</span>
-						</a>
-					</li>
-
-					<li>
 						<a href="#recentUsr">
 							<span class="icon">
 							<ion-icon name="people-outline"></ion-icon>
@@ -117,7 +111,7 @@
 					</li>
 
 					<li>
-						<a href="#">
+						<a href="logout.php">
 							<span class="icon">
 								<ion-icon name="log-out-outline"></ion-icon>
 							</span>
@@ -138,10 +132,6 @@
 							<img src="imgs/l6.png">
 				
 					</div>
-
-					<div class="user">
-						<img src="imgs/customer01.jpg" alt="" />
-					</div>
 				</div>
 
 				<!-- ======================= Cards ================== -->
@@ -149,19 +139,31 @@
 					<div class="card">
 						<div>
 							<div class="numbers"><?php echo $rowcount; ?></div>
-							<div class="cardName">Total Recipes</div>
+							<div class="cardName">Pending Recipes</div>
 						</div>
 
 						<div class="iconBx">
-							<ion-icon name="eye-outline"></ion-icon>
+							<ion-icon name="journal-outline"></ion-icon>
 						</div>
 					</div>
 
 					<div class="card">
 						<div>
 							
-							<div class="numbers"></div>
-							<div class="cardName">Registred Users</div>
+							<div class="numbers"><?php echo $rowcount5;?></div>
+							<div class="cardName">Approved Recipes</div>
+						</div>
+
+						<div class="iconBx">
+							<ion-icon name="document-attach-outline"></ion-icon>
+						</div>
+					</div>
+
+					<div class="card">
+						<div>
+							
+							<div class="numbers"><?php echo $rowcount3;?></div>
+							<div class="cardName">Registered Users</div>
 						</div>
 
 						<div class="iconBx">
@@ -171,29 +173,17 @@
 
 					<div class="card">
 						<div>
-							
-							<div class="numbers"></div>
-							<div class="cardName">Recipes</div>
+							<div class="numbers"><?php echo $rowcount4; ?></div>
+							<div class="cardName">Admin Members</div>
 						</div>
 
 						<div class="iconBx">
-							<ion-icon name="albums-outline"></ion-icon>
-						</div>
-					</div>
-
-					<div class="card">
-						<div>
-							<div class="numbers"><?php echo $rowcount; ?></div>
-							<div class="cardName">Donations</div>
-						</div>
-
-						<div class="iconBx">
-							<ion-icon name="cash-outline"></ion-icon>
+							<ion-icon name="person-circle-outline"></ion-icon>
 						</div>
 					</div>
 				</div>
 
-				<!-- ================ Recent Recipes ================= -->
+				<!-- ================ Pending Recipes ================= -->
 				<div class="details">
 					<div id="recentRes">
                         <div class="recentOrders">
@@ -229,7 +219,7 @@
                     </div>
 
 
-					<!-- ================ Recent Recipes ================= -->
+					<!-- ================ Approved Recipes ================= -->
 				<div class="details">
 					<div id="recentRes">
                         <div class="recentOrders">

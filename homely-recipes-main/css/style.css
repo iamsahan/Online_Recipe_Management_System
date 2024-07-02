@@ -887,17 +887,7 @@ input:valid ~ span:after {
 
 /* * */
 /* primary navigation */
-ul.nav__menu {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 1em;
-  align-items: center;
-  justify-content: center;
-}
 
-.navigation__navbar {
-  gap: 1em;
-}
 
 /* * */
 /* components */
