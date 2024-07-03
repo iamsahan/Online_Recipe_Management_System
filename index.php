@@ -47,10 +47,7 @@ ini_set('display_errors', 1);
                 
                 
             </ul>
-            <form class="d-flex" role="search">
-                <input type="search" placeholder="Search" aria-label="Search">
-                <button type="submit">Search</button>
-              </form>
+            
            
         </nav>
         <!--about section-->
