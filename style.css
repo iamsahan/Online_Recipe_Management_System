@@ -89,7 +89,7 @@ nav button {
 
 /*About Section*/
 .about{
-    background-image: url(images/43060.jpg);
+    background-color: #ffffff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -138,7 +138,7 @@ nav button {
 
 /*popular collection section*/
 .pop {
-    background-color: rgb(229, 232, 188);  
+    background-color: #ffffff;  
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -176,7 +176,7 @@ nav button {
 
 /* recent section */
 .recent {
-    background-color: rgb(173, 146, 210);
+    background-color: #ffffff;
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
